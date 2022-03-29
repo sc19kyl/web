@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+
+{% block content %}
+{% load static %}
+<form action = "http://127.0.0.1:8000/users/rating" method="POST" >{% csrf_token %}
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="name">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary"><a href=""></a>Submit</button>
+  </form>
+{% endblock %}

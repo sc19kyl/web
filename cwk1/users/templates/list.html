@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% block content %}
+{% load static %}
+<table class="table">
+    <thead>
+      <tr>
+
+        <th scope="col">Name</th>
+        <th scope="col">Year</th>
+        <th scope="col">Semester</th>
+        <th scope="col">Taught By</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for set in mod_prof %}
+      
+          {% for module in set %}
+          <tr>
+        <td>{{ module.module.module_name }}</td>
+        <td>{{ module.module.year }}</td>
+        <td>{{ module.module.semester }}</td>
+        {% endfor %}
+        <td>
+        {% for prof in set %}
+        {{ prof.professor.professor.username }}
+        {% endfor %}
+        </td>
+
+        </tr>
+        
+        
+      
+      {% endfor %}
+    </tbody>
+        
+  </table>
+    
+
+{% endblock %}

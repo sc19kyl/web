@@ -1,0 +1,12 @@
+.col{
+    width: 300x;
+    height: 300px;
+}
+
+#rc1{    
+    background : url("../images/news1.jpg") center center;
+}
+
+#rc2{
+    background : url("../images/news2.png") center center;
+}

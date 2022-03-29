@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+
+{% block content %}
+{% load static %}
+
+{% for r in rating %}
+    {% for p in r  %}
+    <p>{{ p.professor }} {{ p.module }} {{ p.rating }}</p>
+    {% endfor %}
+{% endfor %}
+
+
+{% endblock %}
